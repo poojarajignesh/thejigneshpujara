@@ -50,6 +50,13 @@ export const metadata = {
     type: "website",
   },
 
+  twitter: {
+    card: "summary_large_image",
+    title: "Jignesh Pujara | Graphic Designer",
+    description:
+      "Professional Graphic Designer specializing in Logo Design, Packaging Design, Branding and Social Media Creatives.",
+  },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
