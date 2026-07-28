@@ -1,26 +1,34 @@
-import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import {
+  Mail,
+  Phone,
+} from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-[#111111] text-white">
+
       <div className="container-custom py-20">
 
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-16 lg:grid-cols-[1.3fr_.7fr]">
 
           {/* Left */}
 
           <div>
 
-            <h2 className="text-5xl font-bold tracking-wide leading-none">
-              Jignesh{" "}
-              <span className="text-[#C89B3C]">
-                Pujara
-              </span>
+            <h2 className="text-4xl font-bold">
+              Jignesh
+              <span className="text-[#C89B3C]"> Pujara</span>
             </h2>
 
-            <p className="mt-8 max-w-xl leading-8 text-gray-400">
+            <p className="mt-6 max-w-xl leading-8 text-gray-400">
               Professional Graphic Designer based in Ahmedabad,
               specializing in Logo Design, Packaging Design,
               Brand Identity, Print Design and Social Media Creatives.
@@ -30,13 +38,13 @@ export default function Footer() {
 
           {/* Right */}
 
-          <div className="lg:justify-self-end">
+          <div>
 
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-lg font-semibold">
               Contact
             </h3>
 
-            <div className="mt-8 space-y-5">
+            <div className="mt-6 space-y-5">
 
               <a
                 href="tel:+919374112062"
@@ -56,34 +64,34 @@ export default function Footer() {
 
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-6 text-sm font-medium">
+            <div className="mt-8 flex gap-5">
 
-              <a
+              <Link
                 href="https://www.facebook.com/thejigneshpujara"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition hover:text-[#C89B3C]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#C89B3C] hover:bg-[#C89B3C] hover:text-black"
               >
-                Facebook
-              </a>
+                <FaFacebookF size={18} />
+              </Link>
 
-              <a
+              <Link
                 href="https://www.instagram.com/thejigneshpujara"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition hover:text-[#C89B3C]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#C89B3C] hover:bg-[#C89B3C] hover:text-black"
               >
-                Instagram
-              </a>
+                <FaInstagram size={18} />
+              </Link>
 
-              <a
-                href="https://www.linkedin.com/in/thejigneshpujara/"
+              <Link
+                href="https://www.linkedin.com/in/thejigneshpujara"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition hover:text-[#C89B3C]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#C89B3C] hover:bg-[#C89B3C] hover:text-black"
               >
-                LinkedIn
-              </a>
+                <FaLinkedinIn size={18} />
+              </Link>
 
             </div>
 
@@ -95,14 +103,14 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
 
-        <div className="container-custom flex flex-col items-center justify-between gap-3 py-6 text-sm text-gray-500 md:flex-row">
+        <div className="container-custom flex flex-col items-center justify-between gap-4 py-6 text-sm text-gray-500 md:flex-row">
 
           <p>
             © {year} Jignesh Pujara. All rights reserved.
           </p>
 
           <p>
-            Designed & Developed by <span className="text-[#C89B3C]">Graphilory</span>
+            Designed & Developed by Graphilory
           </p>
 
         </div>
