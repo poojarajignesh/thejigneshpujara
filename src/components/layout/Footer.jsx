@@ -1,140 +1,89 @@
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  ArrowUpRight,
-} from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="bg-[#111111] text-white">
       <div className="container-custom py-20">
 
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr]">
+        <div className="grid gap-14 lg:grid-cols-2 lg:items-start">
 
-          {/* Logo & About */}
+          {/* Left */}
 
           <div>
 
-            <Image
-              src="/images/logo/logo-black.png"
-              alt="Jignesh Pujara"
-              width={170}
-              height={45}
-              className="mb-6"
-            />
+            <h2 className="text-5xl font-bold tracking-wide leading-none">
+              Jignesh{" "}
+              <span className="text-[#C89B3C]">
+                Pujara
+              </span>
+            </h2>
 
-            <p className="max-w-md leading-8 text-gray-600">
+            <p className="mt-8 max-w-xl leading-8 text-gray-400">
               Professional Graphic Designer based in Ahmedabad,
-              specializing in Branding, Packaging Design,
-              Print Media and Social Media Creatives.
+              specializing in Logo Design, Packaging Design,
+              Brand Identity, Print Design and Social Media Creatives.
             </p>
 
           </div>
 
-          {/* Quick Links */}
+          {/* Right */}
 
-          <div>
+          <div className="lg:justify-self-end">
 
-            <h3 className="mb-6 text-xl font-semibold">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-4">
-
-              <li>
-                <Link href="/">
-                  Home
-                </Link>
-              </li>
-
-              <li>
-                <a href="#about">
-                  About
-                </a>
-              </li>
-
-              <li>
-                <a href="#portfolio">
-                  Portfolio
-                </a>
-              </li>
-
-              <li>
-                <a href="#contact">
-                  Contact
-                </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-          {/* Contact */}
-
-          <div>
-
-            <h3 className="mb-6 text-xl font-semibold">
+            <h3 className="text-xl font-semibold">
               Contact
             </h3>
 
-            <div className="space-y-5">
+            <div className="mt-8 space-y-5">
 
-              <div className="flex items-center gap-3">
+              <a
+                href="tel:+919374112062"
+                className="flex items-center gap-3 text-gray-300 transition hover:text-[#C89B3C]"
+              >
+                <Phone size={18} />
+                +91 93741 12062
+              </a>
 
-                <Phone
-                  size={18}
-                  className="text-[#C89B3C]"
-                />
+              <a
+                href="mailto:poojara.jignesh@gmail.com"
+                className="flex items-center gap-3 text-gray-300 transition hover:text-[#C89B3C]"
+              >
+                <Mail size={18} />
+                poojara.jignesh@gmail.com
+              </a>
 
-                <span>+91 XXXXX XXXXX</span>
+            </div>
 
-              </div>
+            <div className="mt-10 flex flex-wrap gap-6 text-sm font-medium">
 
-              <div className="flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/thejigneshpujara"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-[#C89B3C]"
+              >
+                Facebook
+              </a>
 
-                <Mail
-                  size={18}
-                  className="text-[#C89B3C]"
-                />
+              <a
+                href="https://www.instagram.com/thejigneshpujara"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-[#C89B3C]"
+              >
+                Instagram
+              </a>
 
-                <span>
-                  hello@jigneshpujara.com
-                </span>
-
-              </div>
-
-              <div className="flex flex-col gap-3 pt-4">
-
-  <a
-    href="https://facebook.com/"
-    target="_blank"
-    className="flex items-center gap-2 hover:text-[#C89B3C]"
-  >
-    Facebook
-    <ArrowUpRight size={16} />
-  </a>
-
-  <a
-    href="https://instagram.com/"
-    target="_blank"
-    className="flex items-center gap-2 hover:text-[#C89B3C]"
-  >
-    Instagram
-    <ArrowUpRight size={16} />
-  </a>
-
-  <a
-    href="https://linkedin.com/"
-    target="_blank"
-    className="flex items-center gap-2 hover:text-[#C89B3C]"
-  >
-    LinkedIn
-    <ArrowUpRight size={16} />
-  </a>
-
-</div>
+              <a
+                href="https://www.linkedin.com/in/thejigneshpujara/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-[#C89B3C]"
+              >
+                LinkedIn
+              </a>
 
             </div>
 
@@ -142,14 +91,24 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-16 border-t border-gray-200 pt-8 text-center text-gray-500">
+      </div>
 
-          © {new Date().getFullYear()} Jignesh Pujara.
-          All Rights Reserved.
+      <div className="border-t border-white/10">
+
+        <div className="container-custom flex flex-col items-center justify-between gap-3 py-6 text-sm text-gray-500 md:flex-row">
+
+          <p>
+            © {year} Jignesh Pujara. All rights reserved.
+          </p>
+
+          <p>
+            Designed & Developed by <span className="text-[#C89B3C]">Graphilory</span>
+          </p>
 
         </div>
 
       </div>
+
     </footer>
   );
 }

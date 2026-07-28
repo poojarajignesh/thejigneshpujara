@@ -1,125 +1,52 @@
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="bg-[#f8f8f8] py-28"
-    >
-      <div className="container-custom">
+    <section id="contact" className="bg-[#111111] py-28 text-white">
+      <div className="container-custom text-center">
 
-        <div className="mb-16">
+        <span className="section-label">
+          Contact
+        </span>
 
-          <span className="uppercase tracking-[4px] text-sm text-yellow-600">
-            Contact
-          </span>
+        <h2 className="section-title mt-5 text-white">
+          Let's Build Your
+          <br />
+          Brand Together.
+        </h2>
 
-          <h2 className="mt-4 text-5xl">
-            Let's Build Something Great
-          </h2>
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-300">
+          Looking for a professional logo, branding, packaging or graphic design
+          solution? Let's discuss your project.
+        </p>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-            Have a project in mind? Whether it's branding,
-            packaging, social media or print design,
-            let's create something impactful together.
-          </p>
+        <div className="mt-14 flex flex-wrap justify-center gap-5">
 
-        </div>
+          <a
+            href="https://wa.me/919374112062"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            <MessageCircle size={20} />
+            <span className="ml-2">WhatsApp</span>
+          </a>
 
-        <div className="grid gap-12 lg:grid-cols-2">
+          <a
+            href="tel:+919374112062"
+            className="btn-outline border-white text-white hover:bg-white hover:text-black"
+          >
+            <Phone size={20} />
+            <span className="ml-2">Call Me</span>
+          </a>
 
-          {/* Left */}
-
-          <div className="space-y-8">
-
-            <div className="flex gap-5">
-
-              <Mail className="text-yellow-600" />
-
-              <div>
-
-                <h3 className="font-semibold">
-                  Email
-                </h3>
-
-                <p className="text-gray-600">
-                  poojara.jignesh@gmail.com
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="flex gap-5">
-
-              <Phone className="text-yellow-600" />
-
-              <div>
-
-                <h3 className="font-semibold">
-                  Phone
-                </h3>
-
-                <p className="text-gray-600">
-                  +91 93741 12062
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="flex gap-5">
-
-              <MapPin className="text-yellow-600" />
-
-              <div>
-
-                <h3 className="font-semibold">
-                  Location
-                </h3>
-
-                <p className="text-gray-600">
-                  Ahmedabad, Gujarat, India
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* Right */}
-
-          <form className="space-y-6">
-
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-black"
-            />
-
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-black"
-            />
-
-            <textarea
-              rows="6"
-              placeholder="Tell me about your project..."
-              className="w-full rounded-xl border border-gray-300 px-5 py-4 outline-none focus:border-black"
-            />
-
-            <button
-              className="inline-flex items-center gap-3 rounded-full bg-black px-8 py-4 text-white transition hover:bg-yellow-600"
-            >
-              Send Message
-
-              <ArrowRight size={18} />
-
-            </button>
-
-          </form>
+          <a
+            href="mailto:poojara.jignesh@gmail.com"
+            className="btn-outline border-white text-white hover:bg-white hover:text-black"
+          >
+            <Mail size={20} />
+            <span className="ml-2">Email</span>
+          </a>
 
         </div>
 

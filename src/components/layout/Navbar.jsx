@@ -26,9 +26,9 @@ export default function Navbar() {
 
   return (
     <header
-        className={`fixed top-0 left-0 z-50 w-full pt-2 transition-all duration-500 ${
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${
         scrolled
-          ? "border-b border-[#E8DFC9] bg-white/80 backdrop-blur-xl shadow-md"
+          ? "border-b border-[#E8DFC9] bg-white/90 backdrop-blur-xl shadow-md"
           : "bg-white"
       }`}
     >
@@ -37,22 +37,19 @@ export default function Navbar() {
         {/* Logo */}
 
         <a href="/" className="flex items-center">
-
           <Image
             src="/images/logo/logo.png"
             alt="Jignesh Pujara"
             width={190}
             height={56}
             priority
-            className="h-auto w-auto object-contain transition duration-300"
+            className="h-auto w-auto object-contain"
           />
-
         </a>
 
         {/* Desktop Menu */}
 
         <nav className="hidden items-center gap-14 lg:flex">
-
           {navLinks.map((item) => (
             <a
               key={item.name}
@@ -62,16 +59,14 @@ export default function Navbar() {
               {item.name}
 
               <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#C89B3C] transition-all duration-300 group-hover:w-full"></span>
-
             </a>
           ))}
-
         </nav>
 
         {/* CTA */}
 
         <a
-          href="https://wa.me/91XXXXXXXXXX"
+          href="https://wa.me/919374112062"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden rounded-full bg-black px-8 py-3.5 text-[15px] font-medium text-white transition duration-300 hover:bg-[#C89B3C] hover:text-black hover:shadow-xl lg:inline-flex"
@@ -97,7 +92,6 @@ export default function Navbar() {
           menuOpen ? "max-h-96 border-t border-gray-200" : "max-h-0"
         }`}
       >
-
         <div className="bg-white">
 
           <nav className="container-custom flex flex-col py-6">
@@ -114,7 +108,7 @@ export default function Navbar() {
             ))}
 
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/919374112062"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 rounded-full bg-black py-4 text-center text-white transition hover:bg-[#C89B3C] hover:text-black"

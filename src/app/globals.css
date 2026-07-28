@@ -14,6 +14,40 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- IMAGE ---------- */
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ---------- TEXT SELECTION ---------- */
+
+::selection {
+  background: var(--gold);
+  color: white;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b78627;
 }
 
 /* ---------- COMMON CONTAINER ---------- */
@@ -34,6 +68,8 @@ section {
 /* ---------- COMMON HEADING ---------- */
 
 .section-label {
+  display: block;
+  margin-bottom: 20px;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -51,21 +87,40 @@ section {
 /* ---------- BUTTON ---------- */
 
 .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   background: #111;
   color: #fff;
-  transition: .3s;
+
+  padding: 15px 34px;
+  border-radius: 999px;
+
+  transition: 0.35s ease;
 }
 
 .btn-primary:hover {
   background: var(--gold);
+  color: #111;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   border: 1px solid #111;
-  transition: .3s;
+
+  padding: 15px 34px;
+  border-radius: 999px;
+
+  transition: 0.35s ease;
 }
 
 .btn-outline:hover {
   background: #111;
   color: white;
+  transform: translateY(-2px);
 }

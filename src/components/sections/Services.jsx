@@ -1,51 +1,64 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import services from "../../data/services";
-
 export default function Services() {
+  const services = [
+    {
+      title: "Logo Design",
+      desc: "Professional logo designs that build a memorable brand identity.",
+    },
+    {
+      title: "Packaging Design",
+      desc: "Creative packaging that increases product value and shelf impact.",
+    },
+    {
+      title: "Brand Identity",
+      desc: "Complete branding systems for modern businesses.",
+    },
+    {
+      title: "Social Media",
+      desc: "Creative social media posts for business growth.",
+    },
+    {
+      title: "Print Design",
+      desc: "Brochures, catalogues, stationery and marketing materials.",
+    },
+    {
+      title: "Advertisement",
+      desc: "Outdoor advertising, newspaper ads and campaign creatives.",
+    },
+  ];
+
   return (
-    <section id="portfolio" className="py-28 bg-white">
+    <section id="services" className="py-28 bg-[#fafafa]">
       <div className="container-custom">
-        {/* Section Heading */}
-        <div className="mb-16">
-          <span className="uppercase tracking-[4px] text-sm text-yellow-600">
-            Portfolio
-          </span>
 
-          <h2 className="text-5xl mt-4">
-            Explore My Work
-          </h2>
-        </div>
+        <span className="section-label">
+          Services
+        </span>
 
-        {/* Category Cards */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="section-title mt-4">
+          What I Can
+          <br />
+          Design For You.
+        </h2>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
           {services.map((item) => (
-            <Link
-              key={item.id}
-              href={`/portfolio/${item.slug}`}
-              className="group rounded-3xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-black hover:shadow-2xl"
+            <div
+              key={item.title}
+              className="rounded-[28px] border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-2 hover:border-[#C89B3C] hover:shadow-xl"
             >
-              <div className="mb-8 flex items-center justify-between">
-                <h3 className="text-2xl font-semibold text-black">
-                  {item.title}
-                </h3>
+              <h3 className="text-2xl font-semibold">
+                {item.title}
+              </h3>
 
-                <ArrowRight
-                  size={22}
-                  className="transition-transform duration-300 group-hover:translate-x-2"
-                />
-              </div>
-
-              <p className="mb-8 leading-8 text-gray-600">
-                {item.description}
+              <p className="mt-4 leading-8 text-gray-600">
+                {item.desc}
               </p>
-
-              <div className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-yellow-600">
-                Explore
-              </div>
-            </Link>
+            </div>
           ))}
+
         </div>
+
       </div>
     </section>
   );

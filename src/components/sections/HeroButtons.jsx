@@ -4,6 +4,8 @@ export default function HeroButtons() {
   return (
     <div className="mt-12 flex flex-wrap gap-5">
 
+      {/* Primary */}
+
       <a
         href="#portfolio"
         className="
@@ -24,10 +26,10 @@ export default function HeroButtons() {
         Explore Portfolio
       </a>
 
+      {/* Secondary */}
+
       <a
-        href="https://wa.me/91XXXXXXXXXX"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#contact"
         className="
           group
           flex
@@ -46,7 +48,7 @@ export default function HeroButtons() {
           hover:text-black
         "
       >
-        WhatsApp Me
+        Get in Touch
 
         <ArrowRight
           size={18}
